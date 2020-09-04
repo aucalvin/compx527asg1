@@ -1,0 +1,29 @@
+{
+  "start":"node server.js",
+  "name": "untitled1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "ui": "browser-sync start --proxy=localhost:8000 --files='**/*.css, **/*.pug, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "athena-express": "^6.0.4",
+    "aws-sdk": "^2.744.0",
+    "bootstrap": "^4.5.2",
+    "chart.js": "^2.9.3",
+    "d3": "^6.1.1",
+    "express": "^4.17.1",
+    "plotly": "^1.0.6",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "nodemon": "^2.0.4"
+  }
+}

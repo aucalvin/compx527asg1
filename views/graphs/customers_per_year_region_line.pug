@@ -1,0 +1,82 @@
+canvas(id='myChart')
+    script.
+        let data = !{data};
+        console.log(data);
+
+        var config = {
+            type: 'line',
+            data: {
+                labels: !{years},
+                datasets: [{
+                    label: 'DE',
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    data: data.DE,
+                    fill: false,
+                },
+                    {
+                        label: 'FR',
+                        backgroundColor: window.chartColors.blue,
+                        borderColor: window.chartColors.blue,
+                        data: data.FR,
+                        fill: false,
+                    },
+                    {
+                        label: 'JP',
+                        backgroundColor: window.chartColors.green,
+                        borderColor: window.chartColors.green,
+                        data: data.JP,
+                        fill: false,
+                    },
+                    {
+                        label: 'UK',
+                        backgroundColor: window.chartColors.orange,
+                        borderColor: window.chartColors.orange,
+                        data: data.UK,
+                        fill: false,
+                    }
+                    // ,
+                    // {
+                    //     label: 'US',
+                    //     backgroundColor: window.chartColors.yellow,
+                    //     borderColor: window.chartColors.yellow,
+                    //     data: data.US,
+                    //     fill: false,
+                    // }
+                ]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Reviews per region excluding US'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }
+                }
+            }
+        };
+
+        var ctx = document.querySelector('#myChart').getContext('2d');
+        line = new Chart(ctx, config);

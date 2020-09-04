@@ -1,0 +1,23 @@
+canvas(id='myChart')
+    script.
+        let data = !{data};
+        console.log(data);
+        let config = {
+            type: 'bar',
+            data: {
+                labels: data.category,
+                datasets: [{
+                    label: "",
+                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                    data: data.reviews
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Reviews for different product categories'
+                }
+            }
+        };
+        var ctx = document.querySelector('#myChart').getContext('2d');
+        pie = new Chart(ctx, config);
