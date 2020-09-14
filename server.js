@@ -25,9 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
  * AWS Athena access
  */
 let credsString = "[default]\n" +
-    "aws_access_key_id=ASIAWUDQXE65DIO25DGS\n" +
-    "aws_secret_access_key=jnhzX63Mv68ZC5MQwVbgFTIx/vmVk2POLblDAXLD\n" +
-    "aws_session_token=FwoGZXIvYXdzEMH//////////wEaDFITl/ch7JG0dgg1MSLLAd7U2cNArqg7JLed7jmpuDmFRzRfz7p44OhD24iDSEU9nnd3vMhVrDJwPlDceD+QUPiUDABE6h6AvS1OBhkPLwaqgcroyFXucOf5uGFDqPf5TpdWgvwtTxxEGEcxYY6K28z2FSQcHDk667qh7VsK9AGydqd9vNorPaAJW929+3oMgpM08k1FZPlv16rx7C/dQOjwbQR0D6RiQxHJ/H46hwh/8bOmYMlGaS0hjsvPO8cp5xxuzprjRTlFILgWmFJUo3J8NGwoKRaXh0hDKLDE/PoFMi00Z04w2KbTLjJuSlPN/iFv+teP+8T8SE58Zo7lHd0VEiT5e5t2HhY574isyMA=";
+    "aws_access_key_id=ASIAWUDQXE65OYW22XWQ\n" +
+    "aws_secret_access_key=qW1mmdpHvl5n8wW5hfcNQumz/Q3Eeex8H913Ktu1\n" +
+    "aws_session_token=FwoGZXIvYXdzENH//////////wEaDJazGINzuHbjLiG9gSLLAVPvyxlmgcuBwlQaZ/CzbEw8IcIauWQTYuO/tC7To+Vx53A1k5h0hiKZvsgNCYY1FISLeHAJ7wjUeVARwrdE19DV3XjXzDMeWe0xdgT0jbPJbgGgDtR0Yf6FI1nLUHkQFG1aYJx//DlbI2LwIu2Q+11X5Grr6Vs2q3OgsoHJO6WidUgJRT++4eKjKj95gCKp6975HFjZsbuewR1MMLpmTYuBXKNHVk4AvaAmI7XUpIt4HQzAD+uf/P/DIWDde1LOCNPJJxbNNHdILtxXKLP1//oFMi0P96h3dHpr6crZcKvqz+PI/rGwfcfwP+sKNc2B4YyX4vDqzeSmfYYQT6Wbnao=";
 
 const awsCredentials = readCredsFromString(credsString);
 
